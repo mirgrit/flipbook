@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <title>DearFlip Flipbook</title>
-  <link rel="stylesheet" href="https://unpkg.com/dearflip/dist/dearflip.min.css" />
+
+  <!-- ✅ Working CDN for DearFlip CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dearflip@2.1.0/dist/dearflip.min.css" />
+
   <style>
     html, body {
       margin: 0;
       height: 100%;
-      background: #f5f5f5;
+      background: #eee;
     }
     #flipbook-container {
       width: 100%;
@@ -17,18 +20,21 @@
   </style>
 </head>
 <body>
+
   <div id="flipbook-container"></div>
-  <script src="https://unpkg.com/dearflip/dist/dearflip.min.js"></script>
+
+  <!-- ✅ Working CDN for DearFlip JS -->
+  <script src="https://cdn.jsdelivr.net/npm/dearflip@2.1.0/dist/dearflip.min.js"></script>
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       new DearFlip('#flipbook-container', {
-        pdfUrl: '21583473018.pdf',
+        pdfUrl: 'sample.pdf',  // or external PDF link
         showToolbar: true,
         pageMode: 'single',
       });
     });
   </script>
+
 </body>
 </html>
-
-
