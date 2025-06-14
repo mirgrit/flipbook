@@ -2,16 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>DearFlip Flipbook</title>
-
-  <!-- ✅ Working CDN for DearFlip CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dearflip@2.1.0/dist/dearflip.min.css" />
-
+  <title>Flipbook Demo</title>
+  <link rel="stylesheet" href="dist/dearflip.min.css" />
   <style>
     html, body {
       margin: 0;
+      padding: 0;
       height: 100%;
-      background: #eee;
+      background: #f0f0f0;
     }
     #flipbook-container {
       width: 100%;
@@ -20,21 +18,17 @@
   </style>
 </head>
 <body>
-
   <div id="flipbook-container"></div>
 
-  <!-- ✅ Working CDN for DearFlip JS -->
-  <script src="https://cdn.jsdelivr.net/npm/dearflip@2.1.0/dist/dearflip.min.js"></script>
-
+  <script src="dist/dearflip.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       new DearFlip('#flipbook-container', {
-        pdfUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',  // or external PDF link
+        pdfUrl: 'sample.pdf',
         showToolbar: true,
-        pageMode: 'single',
+        pageMode: 'single'
       });
     });
   </script>
-
 </body>
 </html>
