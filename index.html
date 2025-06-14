@@ -3,35 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <title>DearFlip Flipbook</title>
+
+  <!-- jQuery (must be loaded first) -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <link rel="stylesheet" href="dflip/css/dflip.min.css" />
+
+  <!-- DearFlip CSS -->
+  <link rel="stylesheet" href="dist/dearflip.min.css" />
+
   <style>
     html, body {
       margin: 0;
+      padding: 0;
       height: 100%;
-      background: #f0f0f0;
     }
-    #flipbook-container {
+    .df-flipbook {
       width: 100%;
       height: 100vh;
     }
   </style>
 </head>
 <body>
-  <div id="flipbook-container"></div>
 
-  <script src="dflip/js/dflip.min.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      new DFLIP({
-        source: 'sample.pdf',
-        webgl: true,
-        backgroundColor: '#ffffff',
-        height: '100%',
-        width: '100%',
-        selector: '#flipbook-container'
-      });
-    });
-  </script>
+  <!-- This is the flipbook container -->
+  <div class="df-flipbook" source="sample.pdf"></div>
+
+  <!-- DearFlip JS -->
+  <script src="dist/dearflip.min.js"></script>
+
 </body>
 </html>
