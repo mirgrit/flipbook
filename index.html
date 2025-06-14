@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>DearFlip Flipbook Demo</title>
-  
-  <!-- DearFlip CSS -->
+  <title>DearFlip Flipbook</title>
   <link rel="stylesheet" href="https://unpkg.com/dearflip/dist/dearflip.min.css" />
-  
   <style>
-    body, html {
-      margin: 0; padding: 0; height: 100%;
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: #f5f5f5;
     }
     #flipbook-container {
       width: 100%;
@@ -18,15 +17,12 @@
   </style>
 </head>
 <body>
-  <p> Hello world </p>
   <div id="flipbook-container"></div>
-
-  <!-- DearFlip JS -->
   <script src="https://unpkg.com/dearflip/dist/dearflip.min.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       new DearFlip('#flipbook-container', {
-        pdfUrl: '21583473018.pdf',  // Replace with your PDF URL
+        pdfUrl: '21583473018.pdf',
         showToolbar: true,
         pageMode: 'single',
       });
@@ -34,3 +30,5 @@
   </script>
 </body>
 </html>
+
+
