@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Flipbook Demo</title>
-  <link rel="stylesheet" href="dist/dearflip.min.css" />
+  <title>DearFlip Flipbook</title>
+  <link rel="stylesheet" href="dflip/css/dflip.min.css" />
   <style>
     html, body {
       margin: 0;
-      padding: 0;
       height: 100%;
       background: #f0f0f0;
     }
@@ -20,13 +19,16 @@
 <body>
   <div id="flipbook-container"></div>
 
-  <script src="dist/dearflip.min.js"></script>
+  <script src="dflip/js/dflip.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      new DearFlip('#flipbook-container', {
-        pdfUrl: 'sample.pdf',
-        showToolbar: true,
-        pageMode: 'single'
+      new DFLIP({
+        source: 'sample.pdf',
+        webgl: true,
+        backgroundColor: '#ffffff',
+        height: '100%',
+        width: '100%',
+        selector: '#flipbook-container'
       });
     });
   </script>
